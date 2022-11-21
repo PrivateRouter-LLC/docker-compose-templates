@@ -1,4 +1,3 @@
-root@PrivateRouter:~# cat /root/docker-compose/pixelfed/construct.sh
 #!/usr/bin/env bash
 
 # This file is specific to the docker-compose you are spinning up
