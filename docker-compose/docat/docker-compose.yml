@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+    docat-org:
+        volumes:
+            - './docat-run/doc:/var/docat/'
+        ports:
+            - '8022:80'
+        image: ghcr.io/docat-org/docat

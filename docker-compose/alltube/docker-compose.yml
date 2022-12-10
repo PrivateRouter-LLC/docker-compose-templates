@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    alltube:
+        container_name: alltube
+        ports:
+            - '5993:80'
+        environment:
+            - PUID=1026
+            - PGID=100
+            - TZ=Europe/Bucharest
+        restart: always
+        image: rudloff/alltube

@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+    libreddit:
+        container_name: libreddit
+        ports:
+            - '5741:8080'
+        restart: always
+        image: spikecodes/libreddit

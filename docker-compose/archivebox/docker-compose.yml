@@ -1,0 +1,13 @@
+version: '2.4'
+
+services:
+    archivebox:
+        image: archivebox/archivebox:master
+        command: server --quick-init 0.0.0.0:8000
+        ports:
+            - 8000:8000
+        environment:
+            - ALLOWED_HOSTS=*                   # add any config options you want as env vars
+            - MEDIA_MAX_SIZE=750m
+        volumes:
+            - ./data:/data
