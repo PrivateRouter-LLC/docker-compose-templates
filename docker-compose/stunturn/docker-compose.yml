@@ -1,0 +1,34 @@
+version: '3.3'
+services:
+    stun-turn-server:
+        container_name: Stun-Turn-Server
+        ports:
+            - '5349:5349'
+            - '5349:5349/udp'
+        environment:
+            - PORT=5349
+            - SECRET=
+            - REALM=
+            - CERT_FILE=
+            - PRIVKEY_FILE=
+            - DH_FILE=
+            - DISPLAY_SECRETS=true
+            - CA_COUNTRY=US
+            - TOTAL_QUOTA=100
+            - MAX_BPS=0
+            - 'CIPHER_LIST=ECDHE-RSA-AES256-GCM-SHA512:DHE-RSA-AES256-GCM-SHA512:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384'
+            - CERT_LENGTH=2048
+            - CERT_VALID_DAYS=3650
+            - CA_STATE_PROV=
+            - CA_LOCALITY=
+            - CA_ORGANIZATION=
+            - DH_LENGTH=2048
+            - CLI_PASSWORD=
+            - LISTENING_IP=
+            - UID=99
+            - GID=100
+            - UMASK=0000
+            - DATA_PERMS=770
+        volumes:
+            - './stun-turn:/stun-turn'
+        image: ich777/stun-turn-server

@@ -1,0 +1,56 @@
+version: "2.1"
+services:
+  mastodon:
+    image: lscr.io/linuxserver/mastodon:latest
+    container_name: mastodon
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+      - LOCAL_DOMAIN=192.168.70.1
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - DB_HOST=db
+      - DB_USER=mastodon
+      - DB_NAME=mastodon
+      - DB_PASS=lm94r1h8S6LzUL
+      - DB_PORT=5432
+      - ES_ENABLED=false
+      - FILE__SECRET_KEY_BASE=/secrets/secretkeybase.txt
+      - FILE__OTP_SECRET=/secrets/otpsecret.txt
+      - FILE__VAPID_PRIVATE_KEY=/secrets/vapidprivatekey.txt
+      - FILE__VAPID_PUBLIC_KEY=/secrets/vapidpublickey.txt
+      - SMTP_PORT=25
+      - SMTP_LOGIN=
+      - SMTP_PASSWORD=
+      - SMTP_FROM_ADDRESS=notifications@social.yourdomain.com
+      - S3_ENABLED=false
+      - WEB_DOMAIN=social.yourdomain.com #optional
+
+    volumes:
+      - ./config:/config
+      - ./secrets:/secrets
+    ports:
+      - 8660:80
+      - 4643:443
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+  db:
+    image: postgres:14
+    container_name: db
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=mastodon
+      - POSTGRES_USER=mastodon
+      - POSTGRES_PASSWORD=lm94r1h8S6LzUL
+    restart: unless-stopped
+
+  redis:
+    image: redis
+    container_name: redis
+    expose:
+      - 6379
+    restart: unless-stopped

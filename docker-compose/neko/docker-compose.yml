@@ -1,0 +1,17 @@
+version: "3.4"
+services:
+  neko:
+    image: "m1k1o/neko:firefox"
+    restart: "unless-stopped"
+    shm_size: "2gb"
+    ports:
+      - "8281:8080"
+      - "52000-52005:52000-52005/udp"
+    environment:
+      NEKO_SCREEN: '1920x1080@30'
+      NEKO_PASSWORD: meowmix
+      NEKO_PASSWORD_ADMIN: ${GEN_PASS}
+      NEKO_EPR: 52000-52005
+      NEKO_NAT1TO1: ${LAN_IP}
+# FW TorGuard internal/external ports 52000-52005 TCP and UDP
+# Replace router IP address with TorGuard wireguard IP for production use

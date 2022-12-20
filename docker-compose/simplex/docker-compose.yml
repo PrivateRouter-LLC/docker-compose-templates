@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    simplex:
+        volumes:
+            - '/config:/etc/opt/simplex'
+            - '/logs:/var/opt/simplex'
+        environment:
+            - SMP_ADDRESS=YOUR_VPN_IP_HERE
+        ports:
+            - '5223:5223'
+        image: privaterouterllc/simplex
