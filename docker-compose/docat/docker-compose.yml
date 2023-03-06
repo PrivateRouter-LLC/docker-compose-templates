@@ -6,3 +6,8 @@ services:
         ports:
             - '8022:80'
         image: ghcr.io/docat-org/docat
+    labels:
+      plugsy.name: "Docat"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-regular/File"
+      plugsy.link: "http://${LAN_IP}:8022"
