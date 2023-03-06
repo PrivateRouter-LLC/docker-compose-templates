@@ -12,3 +12,8 @@ services:
     ports:
       - 8789:8080
     restart: unless-stopped
+    labels:
+      plugsy.name: "Davos"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-solid/ChartLine"
+      plugsy.link: "http://${LAN_IP}:8789"
