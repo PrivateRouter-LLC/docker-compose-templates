@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  cryptalk:
+    restart: always
+    ports:
+      - '82:8080'
+    image: hexagon/cryptalk
+    labels:
+      plugsy.name: "Cryptalk"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/material-sharp/Chat"
+      plugsy.link: "http://${LAN_IP}:82"
