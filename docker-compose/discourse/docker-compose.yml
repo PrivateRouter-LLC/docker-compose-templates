@@ -68,3 +68,8 @@ volumes:
     driver: local
   sidekiq_data:
     driver: local
+labels:
+  plugsy.name: "Discourse"
+  plugsy.category: "Home"
+  plugsy.icon: "@styled-icons/simple-icons/Discourse"
+  plugsy.link: "http://${LAN_IP}:8787"
