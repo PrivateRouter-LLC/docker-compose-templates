@@ -13,3 +13,8 @@ services:
     ports:
       - 8710:8000
     restart: unless-stopped
+    labels:
+      plugsy.name: "Babybuddy"
+      plugsy.category: "Home"
+      plugsy.icon: "@mdi/baby-carriage"
+      plugsy.link: "http://${LAN_IP}:8710"
