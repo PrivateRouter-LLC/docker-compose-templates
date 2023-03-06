@@ -34,3 +34,8 @@ volumes:
     driver: local
   drupal_data:
     driver: local
+ labels:
+   plugsy.name: "Drupal"
+   plugsy.category: "Home"
+   plugsy.icon: "@styled-icons/fa-brands/Drupal"
+   plugsy.link: "http://${LAN_IP}:88"    
