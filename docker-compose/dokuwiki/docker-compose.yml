@@ -10,3 +10,8 @@ services:
 volumes:
   dokuwiki_data:
     driver: local
+labels:
+  plugsy.name: "Dokuwiki"
+  plugsy.category: "Home"
+  plugsy.icon: "@styled-icons/fa-brands/Wikipedia"
+  plugsy.link: "http://${LAN_IP}:88"
