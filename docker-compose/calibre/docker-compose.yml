@@ -16,3 +16,8 @@ services:
       - 8880:8080
       - 8881:8081
     restart: unless-stopped
+    labels:
+      plugsy.name: "Calibre"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-solid/Book"
+      plugsy.link: "http://${LAN_IP}:8880"
