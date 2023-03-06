@@ -12,3 +12,8 @@ services:
     ports:
       - 3200:3000
     restart: unless-stopped
+    labels:
+      plugsy.name: "Audacity"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-brands/audible"
+      plugsy.link: "http://${LAN_IP}:3200"
