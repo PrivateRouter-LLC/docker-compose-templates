@@ -18,3 +18,8 @@ services:
 #   devices:
 #     - path to device:path to device
     restart: unless-stopped
+labels:
+  plugsy.name: "Domoticz"
+  plugsy.category: "Home"
+  plugsy.icon: "@styled-icons/material-outlined/Home"
+  plugsy.link: "http://${LAN_IP}:8585"
