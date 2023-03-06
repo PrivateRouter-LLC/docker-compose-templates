@@ -10,3 +10,8 @@ services:
             - TZ=Europe/Bucharest
         restart: always
         image: rudloff/alltube
+    labels:
+      plugsy.name: "Alltube"
+      plugsy.category: "PrivateCloud Home"
+      plugsy.icon: "@styled-icons/boxicons-logos/YouTube"
+      plugsy.link: "http://${LAN_IP}:5993"     
