@@ -16,3 +16,8 @@ services:
       - 8096:8096
       - 8920:8920 #optional
     restart: unless-stopped
+    labels:
+      plugsy.name: "Emby"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Emby"
+      plugsy.link: "http://${LAN_IP}:8096"
