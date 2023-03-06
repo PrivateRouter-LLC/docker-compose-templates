@@ -11,3 +11,8 @@ services:
             - MEDIA_MAX_SIZE=750m
         volumes:
             - ./data:/data
+    labels:
+      plugsy.name: "Archivebox"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/ArchiveBox"
+      plugsy.link: "http://${LAN_IP}:8000"
