@@ -13,3 +13,8 @@ services:
     ports:
       - 5681:5000
     restart: unless-stopped
+    labels:
+      plugsy.name: "Changedetection"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-solid/ExchangeAlt"
+      plugsy.link: "http://${LAN_IP}:5681"
