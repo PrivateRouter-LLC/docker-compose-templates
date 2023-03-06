@@ -6,9 +6,14 @@ services:
       - AUDIOBOOKSHELF_UID=99
       - AUDIOBOOKSHELF_GID=100
     ports:
-      - 13378:80
+      - 1338:80
     volumes:
       - ./audiobooks:/audiobooks
       - ./podcasts:/podcasts
       - ./config:/config
       - ./metadata:/metadata
+    labels:
+      plugsy.name: "Audiobookshelf"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-solid/BookOpen"
+      plugsy.link: "http://${LAN_IP}:1338"
