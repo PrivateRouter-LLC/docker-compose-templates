@@ -16,3 +16,8 @@ services:
     ports:
       - 3430:3000
     restart: unless-stopped
+    labels:
+      plugsy.name: "Blender"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Blender"
+      plugsy.link: "http://${LAN_IP}:3430"
