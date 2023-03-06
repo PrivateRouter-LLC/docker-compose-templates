@@ -11,3 +11,8 @@ services:
       - ./bitwarden_config:/data
     ports:
       - 5180:80
+    labels:
+      plugsy.name: "Vaultwarden"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-regular/ShieldLock"
+      plugsy.link: "http://${LAN_IP}:5180"
