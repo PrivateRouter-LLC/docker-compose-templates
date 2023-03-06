@@ -13,3 +13,8 @@ services:
     ports:
       - 3000:3000
     restart: unless-stopped
+    labels:
+      plugsy.name: "Doublecommander"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/DoubleCommander"
+      plugsy.link: "http://${LAN_IP}:3000"
