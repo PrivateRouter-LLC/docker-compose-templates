@@ -32,3 +32,8 @@ services:
     volumes:
       - ./data:/config
     restart: unless-stopped
+    labels:
+      plugsy.name: "Bookstack"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/BookStack"
+      plugsy.link: "http://${LAN_IP}:6875"
