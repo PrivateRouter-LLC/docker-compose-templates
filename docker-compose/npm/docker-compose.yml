@@ -20,3 +20,8 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
+    labels:
+      plugsy.name: "Nginx"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Nginx"
+      plugsy.link: "http://${LAN_IP}:81"
