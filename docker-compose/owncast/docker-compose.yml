@@ -1,10 +1,21 @@
-version: '3.3'
+version: '3.8'
 services:
-    run:
-        volumes:
-            - '`pwd`/data:/app/data'
-        ports:
-            - '8482:8080'
-            - '1935:1935'
-        image: run
+  owncast:
+    image: owncast/owncast:latest
+    restart: unless-stopped
+    ports:
+      - "8387:8080"
+    environment:
+      - OWNCAST_ADMIN_USERNAME=admin
+      - OWNCAST_ADMIN_PASSWORD=password
+      - OWNCAST_TITLE=My Owncast Stream
+      - OWNCAST_STREAM_KEY=mysecretkey
+      - OWNCAST_HTTP_ROOT=/stream
+    volumes:
+      - ./data:/app/data
+    labels:
+      plugsy.name: "Owncast"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Owncast"
+      plugsy.link: "http://${LAN_IP}:8387"   
 # Fw internal/external TorGuard wireguard port tcp 1935
