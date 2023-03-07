@@ -30,3 +30,8 @@ services:
       # MAIL_URL=smtp://[smtp username]:[smtp password]@[smtp servername]:[smtp port]/  
     volumes:
       - ./uploads:/app/uploads
+    labels:
+      plugsy.name: "RocketChat"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-regular/Chat"
+      plugsy.link: "http://${LAN_IP}:3200"      
