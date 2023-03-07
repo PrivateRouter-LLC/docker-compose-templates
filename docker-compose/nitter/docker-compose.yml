@@ -20,3 +20,8 @@ services:
     restart: always
     volumes:
       - ./data/redis:/data
+    labels:
+      plugsy.name: "nitter"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-logos/Twitter"
+      plugsy.link: "http://${LAN_IP}:8023"
