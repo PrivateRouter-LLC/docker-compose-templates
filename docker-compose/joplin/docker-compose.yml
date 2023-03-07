@@ -25,3 +25,8 @@ services:
             - POSTGRES_PASSWORD=${GEN_PASS}
             - POSTGRES_USER=joplin
             - POSTGRES_DB=joplin
+    labels:
+      plugsy.name: "Joplin"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/material-outlined/NoteAlt"
+      plugsy.link: "http://${LAN_IP}:22300"
