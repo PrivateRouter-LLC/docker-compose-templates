@@ -42,3 +42,8 @@ volumes:
     driver: local
   moodledata_data:
     driver: local
+    labels:
+      plugsy.name: "moodle"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Moodle"
+      plugsy.link: "http://${LAN_IP}:89"
