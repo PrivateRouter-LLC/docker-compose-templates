@@ -20,3 +20,8 @@ services:
       - ISSUE_URL=https://github.com/paulgoio/searxng/issues
       - GIT_URL=https://github.com/paulgoio/searxng
       - GIT_BRANCH=main
+    labels:
+      plugsy.name: "SearXng"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-regular/Search"
+      plugsy.link: "http://${LAN_IP}:8123"
