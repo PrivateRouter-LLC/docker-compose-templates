@@ -12,3 +12,8 @@ services:
       - ./data:/config
     ports:
       - 8123:8123
+    labels:
+      plugsy.name: "Homeassistant"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-solid/Home"
+      plugsy.link: "http://${LAN_IP}:8123"
