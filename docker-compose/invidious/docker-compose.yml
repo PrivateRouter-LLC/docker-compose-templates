@@ -44,3 +44,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    labels:
+      plugsy.name: "Invidious"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-brands/Youtube"
+      plugsy.link: "http://${LAN_IP}:82"
