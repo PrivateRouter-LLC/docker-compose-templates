@@ -15,3 +15,8 @@ services:
       - 51413:51413
       - 6881:6881/udp
     restart: unless-stopped
+    labels:
+      plugsy.name: "rutorrent"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/material-outlined/CloudDownload"
+      plugsy.link: "http://${LAN_IP}:88"
