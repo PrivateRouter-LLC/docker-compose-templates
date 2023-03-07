@@ -13,3 +13,8 @@ services:
       - 8180:80
       - 4143:443
     restart: unless-stopped
+    labels:
+      plugsy.name: "heimdall"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-solid/Viking"
+      plugsy.link: "http://${LAN_IP}:8180"
