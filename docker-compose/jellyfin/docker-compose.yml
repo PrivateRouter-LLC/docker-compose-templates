@@ -19,3 +19,8 @@ services:
       - 7359:7359/udp #optional
       - 1900:1900/udp #optional
     restart: unless-stopped
+    labels:
+      plugsy.name: "Jellyfin"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Jellyfin"
+      plugsy.link: "http://${LAN_IP}:8096"
