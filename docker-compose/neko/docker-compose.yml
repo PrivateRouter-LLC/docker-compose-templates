@@ -13,5 +13,10 @@ services:
       NEKO_PASSWORD_ADMIN: ${GEN_PASS}
       NEKO_EPR: 52000-52005
       NEKO_NAT1TO1: ${LAN_IP}
+    labels:
+      plugsy.name: "neko"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/entypo/Cat"
+      plugsy.link: "http://${LAN_IP}:8281"      
 # FW TorGuard internal/external ports 52000-52005 TCP and UDP
 # Replace router IP address with TorGuard wireguard IP for production use
