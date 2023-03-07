@@ -21,3 +21,8 @@ services:
     ports:
       - "3000:3000"
       - "222:22"
+    labels:
+      plugsy.name: "Gitea"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-logos/Gitea"
+      plugsy.link: "http://${LAN_IP}:3000"
