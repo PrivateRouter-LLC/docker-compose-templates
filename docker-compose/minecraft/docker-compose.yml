@@ -13,3 +13,8 @@ services:
     volumes:
       # attach a directory relative to the directory containing this compose file
       - ./minecraft-data:/data
+    labels:
+      plugsy.name: "Minecraft"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Minecraft"
+      plugsy.link: "http://${LAN_IP}:25565"
