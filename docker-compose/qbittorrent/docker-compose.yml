@@ -16,3 +16,8 @@ services:
       - 6882:6881/udp
       - 8989:8989
     restart: unless-stopped
+    labels:
+      plugsy.name: "qbittorrent"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-regular/Download"
+      plugsy.link: "http://${LAN_IP}:8989"
