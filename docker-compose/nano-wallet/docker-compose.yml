@@ -6,3 +6,8 @@ services:
     ports:
       - 85:80
     restart: unless-stopped
+    labels:
+      plugsy.name: "nano-wallet"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/crypto/Bitcoin"
+      plugsy.link: "http://${LAN_IP}:85"
