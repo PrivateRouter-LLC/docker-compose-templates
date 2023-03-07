@@ -13,3 +13,8 @@ services:
       - 3951:3000
     shm_size: "1gb"
     restart: unless-stopped
+    labels:
+      plugsy.name: "Firefox"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-brands/Firefox"
+      plugsy.link: "http://${LAN_IP}:3951"
