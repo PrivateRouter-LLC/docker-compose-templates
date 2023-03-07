@@ -13,3 +13,8 @@ services:
       - 82:80
       - 441:443
     restart: unless-stopped
+    labels:
+      plugsy.name: "snapdrop"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-regular/CloudUpload"
+      plugsy.link: "http://${LAN_IP}:82"
