@@ -15,3 +15,8 @@ services:
     ports:
       - 86:80
     restart: unless-stopped
+    labels:
+      plugsy.name: "pixapop"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-regular/Picture"
+      plugsy.link: "http://${LAN_IP}:86"
