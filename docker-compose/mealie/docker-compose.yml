@@ -25,3 +25,8 @@ services:
       # MAX_WORKERS: 8
     volumes:
       - ./data:/app/data
+    labels:
+      plugsy.name: "Mealie"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/FoodHunters"
+      plugsy.link: "http://${LAN_IP}:9925"
