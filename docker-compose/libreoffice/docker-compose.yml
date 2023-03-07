@@ -12,3 +12,8 @@ services:
     ports:
       - 3938:3000
     restart: unless-stopped
+    labels:
+      plugsy.name: "libreoffice"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Libreoffice"
+      plugsy.link: "http://${LAN_IP}:3938"
