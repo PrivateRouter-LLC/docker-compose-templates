@@ -36,3 +36,8 @@ volumes:
     driver: local
   suitecrm_data:
     driver: local
+    labels:
+      plugsy.name: "SuiteCRM"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/material-outlined/Contacts"
+      plugsy.link: "http://${LAN_IP}:82"
