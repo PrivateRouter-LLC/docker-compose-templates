@@ -13,3 +13,8 @@ services:
     ports:
       - "${LAN_IP}:8410:80"
     command: "--memcached=memcached:11211 --port 80"
+    labels:
+      plugsy.name: "yopass"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/material-outlined/VpnKey"
+      plugsy.link: "http://${LAN_IP}:8410"    
