@@ -58,3 +58,8 @@ volumes:
   db-data:
   redis-data:
   app-storage:
+    labels:
+      plugsy.name: "pixelfed"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-brands/Pixelfed"
+      plugsy.link: "http://${LAN_IP}:8989"
