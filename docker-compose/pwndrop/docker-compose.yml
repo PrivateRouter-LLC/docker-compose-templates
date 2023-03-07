@@ -13,3 +13,8 @@ services:
       - ./config:/config
     ports:
       - 8110:8080
+    labels:
+      plugsy.name: "pwndrop"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/heroicons-outline/File"
+      plugsy.link: "http://${LAN_IP}:8110/pwndrop"      
