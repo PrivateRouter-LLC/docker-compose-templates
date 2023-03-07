@@ -40,3 +40,8 @@ volumes:
     driver: local
   prestashop_data:
     driver: local
+    labels:
+      plugsy.name: "prestashop"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/PrestaShop"
+      plugsy.link: "http://${LAN_IP}:86"
