@@ -12,3 +12,8 @@ services:
     ports:
       - 84:80
     restart: unless-stopped
+    labels:
+      plugsy.name: "Freshrss"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/material-outlined/RssFeed"
+      plugsy.link: "http://${LAN_IP}:84"
