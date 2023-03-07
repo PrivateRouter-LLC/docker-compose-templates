@@ -17,3 +17,8 @@ services:
       - 22000:22000/udp
       - 21027:21027/udp
     restart: unless-stopped
+    labels:
+      plugsy.name: "syncthing"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/material-rounded/Sync"
+      plugsy.link: "http://${LAN_IP}:8384"
