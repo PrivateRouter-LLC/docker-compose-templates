@@ -10,3 +10,8 @@ services:
     command: -db /data/store.db
     volumes:
       - ./data:/data
+    labels:
+      plugsy.name: "picoshare"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-regular/Share"
+      plugsy.link: "http://${LAN_IP}:3001"
