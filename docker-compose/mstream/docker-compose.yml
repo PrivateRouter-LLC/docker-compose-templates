@@ -13,3 +13,8 @@ services:
       - ./music:/music
     ports:
       - 3300:3000
+    labels:
+      plugsy.name: "mstream"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-solid/Music"
+      plugsy.link: "http://${LAN_IP}:3300"
