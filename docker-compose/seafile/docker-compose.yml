@@ -42,3 +42,8 @@ services:
 
 networks:
   seafile-net:
+    labels:
+      plugsy.name: "Seafile"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/icomoon/Seafile"
+      plugsy.link: "http://${LAN_IP}:8160"
