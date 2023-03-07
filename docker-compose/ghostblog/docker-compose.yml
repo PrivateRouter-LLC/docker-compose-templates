@@ -9,3 +9,8 @@ services:
       - url=http://${LAN_IP}:3001
     ports:
       - 3001:2368
+    labels:
+      plugsy.name: "Ghost"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-logos/Ghost"
+      plugsy.link: "http://${LAN_IP}:3001"      
