@@ -6,3 +6,8 @@ services:
             - '5741:8080'
         restart: always
         image: spikecodes/libreddit
+    labels:
+      plugsy.name: "libreddit"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-logos/RedditSquare"
+      plugsy.link: "http://${LAN_IP}:5741"    
