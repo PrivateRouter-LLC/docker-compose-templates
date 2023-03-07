@@ -19,3 +19,8 @@ services:
 volumes:
   var_lib:
   etc:
+    labels:
+      plugsy.name: "Motioneye"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/material-outlined/Visibility"
+      plugsy.link: "http://${LAN_IP}:8081"
