@@ -34,3 +34,8 @@ services:
       - TZ=Europe/London
     ports:
       - 8833:80
+    labels:
+      plugsy.name: "lychee"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-solid/Image"
+      plugsy.link: "http://${LAN_IP}:8833"
