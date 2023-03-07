@@ -10,4 +10,9 @@ services:
       - TZ='Africa/Casablanca'
     volumes:
       - ./data:/app/data
+    labels:
+      plugsy.name: "Gotify"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/material-sharp/Notifications"
+      plugsy.link: "http://${LAN_IP}:8050"      
 
