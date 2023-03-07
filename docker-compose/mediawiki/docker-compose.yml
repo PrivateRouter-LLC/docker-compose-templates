@@ -36,3 +36,8 @@ volumes:
     driver: local
   mediawiki_data:
     driver: local
+  labels:
+    plugsy.name: "Mediawiki"
+    plugsy.category: "Home"
+    plugsy.icon: "@styled-icons/boxicons-logos/Mediawiki"
+    plugsy.link: "http://${LAN_IP}:82"
