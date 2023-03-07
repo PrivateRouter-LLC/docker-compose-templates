@@ -31,3 +31,8 @@ services:
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
+    labels:
+      plugsy.name: "Nextcloud"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/material-outlined/Cloud"
+      plugsy.link: "http://${LAN_IP}:8531"
