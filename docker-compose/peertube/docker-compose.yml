@@ -40,3 +40,8 @@ services:
     volumes:
       - ./docker-volume/opendkim/keys:/etc/opendkim/keys
     restart: "always"
+    labels:
+      plugsy.name: "PeerTube"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-logos/Peertube"
+      plugsy.link: "http://${LAN_IP}:9000"
