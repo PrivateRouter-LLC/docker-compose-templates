@@ -43,3 +43,8 @@ volumes:
     driver: local
   elasticsearch_data:
     driver: local
+ labels:
+   plugsy.name: "magento"
+   plugsy.category: "Home"
+   plugsy.icon: "@styled-icons/fa-brands/FaMagento"
+   plugsy.link: "http://${LAN_IP}:82"
