@@ -63,3 +63,8 @@ services:
 
 volumes:
   db_data:
+    labels:
+      plugsy.name: "Wordpress"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-logos/WordPress"
+      plugsy.link: "http://${LAN_IP}:88"
