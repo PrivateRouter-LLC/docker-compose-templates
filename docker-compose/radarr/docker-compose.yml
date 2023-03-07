@@ -14,3 +14,8 @@ services:
     ports:
       - 7878:7878
     restart: unless-stopped
+    labels:
+      plugsy.name: "radarr"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-solid/Movie"
+      plugsy.link: "http://${LAN_IP}:7878"
