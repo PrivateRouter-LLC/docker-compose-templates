@@ -12,3 +12,8 @@ services:
     ports:
       - 8443:8443
     restart: unless-stopped
+    labels:
+      plugsy.name: "VScode"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Visualstudiocode"
+      plugsy.link: "http://${LAN_IP}:8443"
