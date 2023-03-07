@@ -44,3 +44,8 @@ services:
       #- whoogle.env
     ports:
       - 5000:5000
+    labels:
+      plugsy.name: "Whoogle"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/boxicons-logos/Google"
+      plugsy.link: "http://${LAN_IP}:5000"
