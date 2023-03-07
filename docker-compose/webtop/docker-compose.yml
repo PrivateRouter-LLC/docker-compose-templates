@@ -11,3 +11,8 @@ services:
       - ./config:/config
     ports:
       - 3000:3000
+    labels:
+      plugsy.name: "WebTop"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/icomoon/Windows"
+      plugsy.link: "http://${LAN_IP}:3000"
