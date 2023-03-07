@@ -8,6 +8,11 @@ services:
             - '1337:80'
             - '27960:27960'
         image: 'treyyoder/quakejs:latest'
+    labels:
+      plugsy.name: "quakejs"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Quake"
+      plugsy.link: "http://${LAN_IP}:1337"        
 
 # Fw TG wireguard internal/external 27960
 # www.quakejs.com/play?connect%20SERVERIP:27960
