@@ -14,3 +14,8 @@ services:
     ports:
       - 8681:8000
     restart: unless-stopped
+    labels:
+      plugsy.name: "Papermerge"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-regular/FileAlt"
+      plugsy.link: "http://${LAN_IP}:8681"
