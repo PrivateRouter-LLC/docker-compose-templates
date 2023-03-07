@@ -12,3 +12,8 @@ services:
     ports:
       - 9696:9696
     restart: unless-stopped
+    labels:
+      plugsy.name: "prowlarr"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Prowlarr"
+      plugsy.link: "http://${LAN_IP}:9696"    
