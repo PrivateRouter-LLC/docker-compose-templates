@@ -4,3 +4,8 @@ services:
         ports:
             - '8550:8000'
         image: prologic/yarnd
+    labels:
+      plugsy.name: "YarnSocial"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/entypo-social/SocialNetwork"
+      plugsy.link: "http://${LAN_IP}:8550"        
