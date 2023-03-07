@@ -14,3 +14,8 @@ services:
     ports:
       - 8686:8686
     restart: unless-stopped
+    labels:
+      plugsy.name: "Lidarr"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/Lidarr"
+      plugsy.link: "http://${LAN_IP}:8686"
