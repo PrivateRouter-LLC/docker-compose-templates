@@ -14,3 +14,8 @@ services:
     ports:
       - 8787:8787
     restart: unless-stopped
+    labels:
+      plugsy.name: "readarr"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-solid/Book"
+      plugsy.link: "http://${LAN_IP}:8787"
