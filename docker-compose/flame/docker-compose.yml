@@ -10,3 +10,8 @@ services:
     environment:
       - PASSWORD=password
     restart: unless-stopped
+    labels:
+      plugsy.name: "Flame"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/fa-solid/Flame"
+      plugsy.link: "http://${LAN_IP}:5005"
