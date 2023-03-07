@@ -39,3 +39,8 @@ volumes:
     driver: local
   opencart_storage_data:
     driver: local
+    labels:
+      plugsy.name: "OpenCart"
+      plugsy.category: "Home"
+      plugsy.icon: "@styled-icons/simple-icons/OpenCart"
+      plugsy.link: "http://${LAN_IP}:84"
