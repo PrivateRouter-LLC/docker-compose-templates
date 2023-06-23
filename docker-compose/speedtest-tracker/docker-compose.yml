@@ -15,5 +15,5 @@ services:
         restart: unless-stopped
 
 # The defualt login is
-# Email address: admin@admin.com
+# Email address: admin@example.com
 # Password: password
