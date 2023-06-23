@@ -13,3 +13,7 @@ services:
             - '/path/to/directory/web:/etc/ssl/web'
         image: 'ghcr.io/alexjustesen/speedtest-tracker:latest'
         restart: unless-stopped
+
+# The defualt login is
+# Email address: admin@admin.com
+# Password: password
