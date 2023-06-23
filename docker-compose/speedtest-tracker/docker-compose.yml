@@ -14,6 +14,6 @@ services:
         image: 'ghcr.io/alexjustesen/speedtest-tracker:latest'
         restart: unless-stopped
 
-# The defualt login is
+# The default login is
 # Email address: admin@example.com
 # Password: password
