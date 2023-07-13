@@ -24,4 +24,4 @@ services:
       plugsy.name: "SearXng"
       plugsy.category: "Home"
       plugsy.icon: "@styled-icons/boxicons-regular/Search"
-      plugsy.link: "http://${LAN_IP}:8123"
+      plugsy.link: "http://${LAN_IP}:8125"
