@@ -5,7 +5,7 @@ services:
     image: paulgoio/searxng:production
     restart: always
     ports:
-      - ${LAN_IP}:8123:8080
+      - ${LAN_IP}:8125:8080
     cap_drop:
       - ALL
     cap_add:
