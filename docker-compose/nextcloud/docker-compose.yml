@@ -18,10 +18,10 @@ services:
       - MYSQL_USER=nextcloud
 
   app:
-    image: nextcloud
+    image: $IMAGE_NAME
     restart: always
     ports:
-      - 8531:80
+      - ${LAN_IP}:${port}:80
     links:
       - db
     volumes:
