@@ -1,0 +1,25 @@
+version: "3.0"
+services:
+  db:
+    image: postgres:9
+    ports: 
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: ${GEN_PASS}
+      POSTGRES_USER: claper
+      POSTGRES_DB: claper
+  app:
+    image: ghcr.io/claperco/claper:latest
+    ports: 
+      - 4000:4000
+    volumes:
+      - ./claper/uploads:/app/priv/static/uploads
+    environment:
+      DATABASE_URL: postgres://claper:${GEN_PASS}:5432/claper
+      SECRET_KEY_BASE: 0LZiQBLw4WvqPlz4cz8RsHJlxNiSqM9B48y4ChyJ5v1oA0L/TPIqRjQNdPZN3iEG
+      MAIL_TRANSPORT: local
+      ENDPOINT_PORT: 4000
+    depends_on:
+      - db
+volumes:
+  uploads:
