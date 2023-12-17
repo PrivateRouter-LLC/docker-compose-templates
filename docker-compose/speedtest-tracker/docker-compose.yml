@@ -1,19 +1,22 @@
 version: '3.3'
 services:
-    speedtest-tracker:
+    speedtest:
         container_name: speedtest-tracker
+        image: henrywhitaker3/speedtest-tracker:latest
         ports:
-            - '8765:80'
-            - '8443:443'
-        environment:
-            - PUID=1000
-            - PGID=1000
+            - 8765:80
         volumes:
-            - '/path/to/directory:/config'
-            - '/path/to/directory/web:/etc/ssl/web'
-        image: 'ghcr.io/alexjustesen/speedtest-tracker:latest'
+            - /path/to/data:/config
+        environment:
+            - OOKLA_EULA_GDPR=true
+            - AUTH=true
+        logging:
+            driver: "json-file"
+            options:
+                max-file: "10"
+                max-size: "200k"
         restart: unless-stopped
 
 # The default login is
-# Email address: admin@example.com
+# Email address: admin@admin.com
 # Password: password
