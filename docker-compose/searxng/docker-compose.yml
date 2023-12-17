@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   searxng:
-    image: paulgoio/searxng:production
+    image: searxng/searxng:latest
     restart: always
     ports:
       - ${LAN_IP}:8125:8080
@@ -15,13 +15,13 @@ services:
     environment:
       - IMAGE_PROXY=true
       - BASE_URL=http://${LAN_IP}
-      - NAME=searx
+      - NAME=SearXNG
       - CONTACT=contact@searxng.org
-      - ISSUE_URL=https://github.com/paulgoio/searxng/issues
-      - GIT_URL=https://github.com/paulgoio/searxng
+      - ISSUE_URL=https://github.com/searxng/searxng/issues
+      - GIT_URL=https://github.com/searxng/searxng
       - GIT_BRANCH=main
     labels:
-      plugsy.name: "SearXng"
+      plugsy.name: "SearXNG"
       plugsy.category: "Home"
       plugsy.icon: "@styled-icons/boxicons-regular/Search"
       plugsy.link: "http://${LAN_IP}:8125"
